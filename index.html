@@ -174,6 +174,35 @@
 @media(max-width:850px){#rg-thanksgiving-root .rg-feature-content{grid-template-columns:1fr}#rg-thanksgiving-root .rg-spotlight{border-left:0;border-top:1px solid #3a5269;padding:16px 22px}#rg-thanksgiving-root .rg-spotlight-number{font-size:52px}#rg-thanksgiving-root .rg-bar-row{grid-template-columns:minmax(122px,195px) minmax(50px,1fr) 44px;gap:10px}#rg-thanksgiving-root .rg-bar-value{font-size:19px}}
 @media(max-width:600px){#rg-thanksgiving-root{font-size:16px}#rg-thanksgiving-root .rg-stat-grid{grid-template-columns:repeat(2,minmax(0,1fr))}#rg-thanksgiving-root .rg-stat{padding:14px 14px 16px}#rg-thanksgiving-root .rg-stat strong{font-size:32px}#rg-thanksgiving-root .rg-overview-top{padding:11px 15px}#rg-thanksgiving-root .rg-overview-context{font-size:11px}#rg-thanksgiving-root .rg-menu-list{padding:7px 10px}#rg-thanksgiving-root .rg-menu button{font-size:13px;padding:10px 11px}#rg-thanksgiving-root .rg-feature-header{align-items:flex-start}#rg-thanksgiving-root .rg-chart-download{width:100%;text-align:center}#rg-thanksgiving-root .rg-tabs{gap:5px}#rg-thanksgiving-root .rg-tab{padding:9px 11px;font-size:12.5px}#rg-thanksgiving-root .rg-bar-row{grid-template-columns:minmax(115px,43%) minmax(30px,1fr) 30px;gap:7px;padding:12px 0}#rg-thanksgiving-root .rg-bar-label{font-size:13px}#rg-thanksgiving-root .rg-bar-label small{font-size:11px}#rg-thanksgiving-root .rg-bar-value{font-size:17px}#rg-thanksgiving-root .rg-track{height:12px}#rg-thanksgiving-root .rg-top-card{padding:17px 13px;gap:10px}#rg-thanksgiving-root .rg-rankmedal{width:37px;min-width:37px;height:37px;font-size:17px}#rg-thanksgiving-root .rg-top-score strong{font-size:30px}#rg-thanksgiving-root .rg-top-card p{font-size:15px}#rg-thanksgiving-root .rg-filter-group{width:100%}#rg-thanksgiving-root .rg-filter{flex:1;padding:10px 7px;font-size:12px}#rg-thanksgiving-root .rg-search-wrap{max-width:none}#rg-thanksgiving-root .rg-table-tools{padding:12px}#rg-thanksgiving-root .rg-table-help{width:100%}#rg-thanksgiving-root .rg-tool-actions{justify-content:flex-start;width:100%}#rg-thanksgiving-root .rg-table th:first-child .rg-info-button{display:none}#rg-thanksgiving-root .rg-table thead th:nth-child(2),#rg-thanksgiving-root .rg-table tbody td:nth-child(2){left:62px}#rg-thanksgiving-root .rg-table col:nth-child(1){width:62px}#rg-thanksgiving-root .rg-table col:nth-child(2){width:175px}#rg-thanksgiving-root .rg-table{min-width:1800px}#rg-thanksgiving-root .rg-table td{padding:12px 6px}#rg-thanksgiving-root .rg-table-note{align-items:flex-start}#rg-thanksgiving-root .rg-method-item h3{font-size:18px}#rg-thanksgiving-root .rg-weight-callout,#rg-thanksgiving-root .rg-condition-grid{grid-template-columns:1fr}#rg-thanksgiving-root .rg-weight-stat strong{font-size:19px}}
 @media(prefers-reduced-motion:reduce){#rg-thanksgiving-root .rg-fill,#rg-thanksgiving-root .rg-action,#rg-thanksgiving-root .rg-tab,#rg-thanksgiving-root .rg-chart-download,#rg-thanksgiving-root .rg-scroll{transition:none!important;scroll-behavior:auto!important}}
+
+/* CMS embed navigation: compact navy-blue RotoGrinders scroll controls. */
+html{scroll-behavior:smooth;scrollbar-width:thin;scrollbar-color:#2879fe #edf3fb}
+html::-webkit-scrollbar,body::-webkit-scrollbar{width:8px;height:8px}
+html::-webkit-scrollbar-track,body::-webkit-scrollbar-track{background:#edf3fb}
+html::-webkit-scrollbar-thumb,body::-webkit-scrollbar-thumb{background:#2879fe;border:1px solid #d9e5f5;border-radius:9px}
+#rg-thanksgiving-root .rg-menu{display:block}
+#rg-thanksgiving-root .rg-menu-row{display:flex;align-items:stretch;min-width:0}
+#rg-thanksgiving-root .rg-menu-list{flex:1;min-width:0;scrollbar-width:none}
+#rg-thanksgiving-root .rg-menu-list::-webkit-scrollbar{display:none}
+#rg-thanksgiving-root .rg-menu-nav-arrows{display:none;align-items:center;gap:4px;padding:0 10px 0 3px;background:#fff}
+#rg-thanksgiving-root .rg-menu.has-overflow .rg-menu-nav-arrows{display:flex}
+#rg-thanksgiving-root .rg-menu-arrow{display:grid;place-items:center;width:32px;height:35px;padding:0;border:1px solid #b6cce6;background:#fff;color:#155fcf;font-size:24px;font-weight:900;line-height:1}
+#rg-thanksgiving-root .rg-menu-arrow:hover:not(:disabled){background:#eef5ff;border-color:#2879fe}
+#rg-thanksgiving-root .rg-menu-arrow:disabled{opacity:.28;cursor:default}
+#rg-thanksgiving-root .rg-menu-scrollline{display:none;position:relative;height:6px;background:#e5edf8;border-top:1px solid #d5e3f3;overflow:hidden}
+#rg-thanksgiving-root .rg-menu.has-overflow .rg-menu-scrollline{display:block}
+#rg-thanksgiving-root .rg-menu-scrollthumb{position:absolute;left:0;top:0;height:100%;width:100%;background:linear-gradient(90deg,#155fcf,#2879fe)}
+#rg-thanksgiving-root .rg-table-scroll-top-wrap{padding:10px 15px 12px;background:#f7faff;border-bottom:1px solid #d7e4f2}
+#rg-thanksgiving-root .rg-table-scroll-top-label{margin-bottom:5px;color:#45627d;font-size:12px;font-weight:800}
+#rg-thanksgiving-root .rg-table-scroll-top{height:19px;width:100%;overflow-x:auto;overflow-y:hidden;border:1px solid #d7e4f2;background:#edf3fb;scrollbar-width:auto;scrollbar-color:#2879fe #e5edf8;-webkit-overflow-scrolling:touch}
+#rg-thanksgiving-root .rg-table-scroll-top-inner{height:1px}
+#rg-thanksgiving-root .rg-table-scroll-top::-webkit-scrollbar{height:13px}
+#rg-thanksgiving-root .rg-table-scroll-top::-webkit-scrollbar-track{background:#e5edf8}
+#rg-thanksgiving-root .rg-table-scroll-top::-webkit-scrollbar-thumb{background:#2879fe;border:2px solid #e5edf8;border-radius:9px}
+#rg-thanksgiving-root .rg-section{scroll-margin-top:78px}
+#rg-thanksgiving-root #rg-menu-anchor{scroll-margin-top:10px}
+@media(max-width:600px){#rg-thanksgiving-root .rg-menu-nav-arrows{padding-right:6px}#rg-thanksgiving-root .rg-menu-arrow{width:28px;height:31px}#rg-thanksgiving-root .rg-table-scroll-top-wrap{padding:8px 11px 10px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}}
 </style>
 </head>
 <body style="margin:0;background:#fff">
@@ -188,12 +217,21 @@
     </div>
   </div>
   <div id="rg-menu-anchor" class="rg-menu-anchor" aria-hidden="true"></div>
-  <nav id="rg-menu" class="rg-menu" aria-label="Research sections"><div class="rg-menu-list">
-    <button type="button" data-go="rg-widget" class="is-active">Explore the index</button>
-    <button type="button" data-go="rg-top5">Top five teams</button>
-    <button type="button" data-go="rg-full">Full rankings</button>
-    <button type="button" data-go="rg-methodology">Methodology</button>
-  </div></nav>
+  <nav id="rg-menu" class="rg-menu" aria-label="Research sections">
+    <div class="rg-menu-row">
+      <div class="rg-menu-list" id="rg-menu-list">
+        <button type="button" data-go="rg-widget" class="is-active">Explore the index</button>
+        <button type="button" data-go="rg-top5">Top five teams</button>
+        <button type="button" data-go="rg-full">Full rankings</button>
+        <button type="button" data-go="rg-methodology">Methodology</button>
+      </div>
+      <div class="rg-menu-nav-arrows" aria-label="Scroll section navigation">
+        <button type="button" class="rg-menu-arrow" id="rg-menu-prev" aria-label="Earlier sections">‹</button>
+        <button type="button" class="rg-menu-arrow" id="rg-menu-next" aria-label="Later sections">›</button>
+      </div>
+    </div>
+    <div class="rg-menu-scrollline" aria-hidden="true"><div class="rg-menu-scrollthumb" id="rg-menu-scrollthumb"></div></div>
+  </nav>
   <section class="rg-section" id="rg-widget" aria-labelledby="rg-widget-title">
     <h2 class="rg-section-heading" id="rg-widget-title">How the five leaders compare</h2>
     <p class="rg-sub">The index counts six types of disappointing Thanksgiving losses. Explore how its five highest-ranked teams compare by qualifying conditions, distinct qualifying games, and all holiday losses.</p>
@@ -229,6 +267,10 @@
       <div class="rg-filter-group" role="group" aria-label="Filter teams"><button class="rg-filter" type="button" data-filter="all" aria-pressed="true">All 32 teams</button><button class="rg-filter" type="button" data-filter="scored" aria-pressed="false">Scored points</button><button class="rg-filter" type="button" data-filter="nogames" aria-pressed="false">No games</button></div></div>
     <div class="rg-table-frame"><div class="rg-table-tools"><div class="rg-table-help"><b>Sortable results</b> · Select a heading to sort; hover, focus, or tap its small <span aria-label="information icon">ⓘ</span> for definitions. NR means not ranked.</div>
       <div class="rg-tool-actions"><button type="button" class="rg-action" id="rg-csv">Download filtered CSV</button><button type="button" class="rg-action" id="rg-png">Download page PNG</button><button type="button" class="rg-arrow" id="rg-arrow-left" aria-label="Scroll table left">←</button><button type="button" class="rg-arrow" id="rg-arrow-right" aria-label="Scroll table right">→</button></div></div>
+       <div class="rg-table-scroll-top-wrap" id="rg-table-scroll-top-wrap" aria-label="Horizontal ranking-table scrollbar">
+         <div class="rg-table-scroll-top-label">Scroll sideways to explore all 12 ranking columns</div>
+         <div class="rg-table-scroll-top" id="rg-table-scroll-top" tabindex="0" aria-label="Scroll across table columns"><div class="rg-table-scroll-top-inner" id="rg-table-scroll-top-inner"></div></div>
+       </div>
       <div class="rg-scroll" id="rg-table-scroll" tabindex="0" aria-label="Scrollable Thanksgiving rankings table"><table class="rg-table" id="rg-results-table"><colgroup><col><col><col><col><col><col><col><col><col><col><col><col></colgroup><thead><tr id="rg-table-head"></tr></thead><tbody id="rg-table-body"></tbody></table></div>
       <div class="rg-table-note"><span id="rg-result-count" aria-live="polite">Showing 1–15 of 32 teams</span><div class="rg-pager" id="rg-pager" aria-label="Table pages"></div></div></div>
     <p class="rg-method-note">“Curse points” add all six qualifying conditions. “Distinct qualifying losses” counts games only once even if several conditions applied. Teams with no appearances are not ranked.</p>
@@ -321,8 +363,16 @@ th.addEventListener('click',e=>{const b=e.target.closest('.rg-sort-button');if(!
 $('#rg-search').addEventListener('input',e=>{search=e.target.value.trim().toLowerCase();page=0;renderTable()});
 $$('.rg-filter').forEach(b=>b.addEventListener('click',()=>{fil=b.dataset.filter;$$('.rg-filter').forEach(f=>f.setAttribute('aria-pressed',String(f===b)));page=0;renderTable()}));
 $('#rg-pager').addEventListener('click',e=>{const b=e.target.closest('button[data-page]');if(!b||b.disabled)return;const p=b.dataset.page;page=p==='prev'?page-1:p==='next'?page+1:Number(p);renderTable();});
-const sc=$('#rg-table-scroll');function updateArrows(){const max=sc.scrollWidth-sc.clientWidth;$('#rg-arrow-left').disabled=sc.scrollLeft<=2;$('#rg-arrow-right').disabled=sc.scrollLeft>=max-2;}sc.addEventListener('scroll',updateArrows,{passive:true});
-$('#rg-arrow-left').addEventListener('click',()=>sc.scrollBy({left:-Math.max(280,sc.clientWidth*.7),behavior:reduced()?'instant':'smooth'}));$('#rg-arrow-right').addEventListener('click',()=>sc.scrollBy({left:Math.max(280,sc.clientWidth*.7),behavior:reduced()?'instant':'smooth'}));
+ const sc=$('#rg-table-scroll'),topSc=$('#rg-table-scroll-top'),topInner=$('#rg-table-scroll-top-inner'),topWrap=$('#rg-table-scroll-top-wrap');
+ function syncTopScrollbarWidth(){
+  topInner.style.width=sc.scrollWidth+'px';
+  topWrap.hidden=sc.scrollWidth<=sc.clientWidth+3;
+ }
+ function updateArrows(){syncTopScrollbarWidth();const max=Math.max(0,sc.scrollWidth-sc.clientWidth);$('#rg-arrow-left').disabled=sc.scrollLeft<=2;$('#rg-arrow-right').disabled=max<=2||sc.scrollLeft>=max-2;}
+ sc.addEventListener('scroll',()=>{if(Math.abs(topSc.scrollLeft-sc.scrollLeft)>1)topSc.scrollLeft=sc.scrollLeft;updateArrows();},{passive:true});
+ topSc.addEventListener('scroll',()=>{if(Math.abs(sc.scrollLeft-topSc.scrollLeft)>1)sc.scrollLeft=topSc.scrollLeft;updateArrows();},{passive:true});
+$('#rg-arrow-left').addEventListener('click',()=>sc.scrollBy({left:-Math.max(280,sc.clientWidth*.7),behavior:reduced()?'auto':'smooth'}));
+ $('#rg-arrow-right').addEventListener('click',()=>sc.scrollBy({left:Math.max(280,sc.clientWidth*.7),behavior:reduced()?'auto':'smooth'}));
 const tip=$('#rg-tooltip');let currentTip=null;
 function showTip(trigger){if(!trigger)return;currentTip=trigger;tip.textContent=TIPS[trigger.dataset.tip]||'';tip.classList.add('is-visible');tip.setAttribute('aria-hidden','false');positionTip();}
 function positionTip(){if(!currentTip)return;const a=currentTip.getBoundingClientRect(),w=tip.offsetWidth,h=tip.offsetHeight;let left=Math.max(12,Math.min(window.innerWidth-w-12,a.left+a.width/2-w/2));let top=a.top-h-13;const placement=top<10?'bottom':'top';if(placement==='bottom')top=Math.min(window.innerHeight-h-10,a.bottom+13);tip.dataset.placement=placement;tip.style.left=left+'px';tip.style.top=Math.max(8,top)+'px';tip.style.setProperty('--rg-arrow-x',Math.max(12,Math.min(w-12,a.left+a.width/2-left))+'px')}
@@ -331,13 +381,26 @@ th.addEventListener('pointerover',e=>{const b=e.target.closest('.rg-info-button'
 th.addEventListener('focusin',e=>{const b=e.target.closest('.rg-info-button');if(b)showTip(b)});th.addEventListener('focusout',e=>{if(e.target.closest('.rg-info-button'))hideTip()});
 th.addEventListener('click',e=>{const b=e.target.closest('.rg-info-button');if(!b)return;e.stopPropagation();if(currentTip===b&&tip.classList.contains('is-visible'))hideTip();else showTip(b)});
 root.addEventListener('pointerdown',e=>{if(currentTip&&!e.target.closest('.rg-info-button'))hideTip()});root.addEventListener('keydown',e=>{if(e.key==='Escape')hideTip()});window.addEventListener('resize',()=>{updateArrows();if(currentTip)positionTip()});window.addEventListener('scroll',()=>{if(currentTip)positionTip()},{passive:true});
-// Smooth navigation follows the actual scroll owner, including an overflow-auto CMS wrapper if present.
-let scrollJob=null;
-function ownerFor(el){let n=el.parentElement;while(n&&n!==document.body&&n!==document.documentElement){const st=getComputedStyle(n);if(/auto|scroll/.test(st.overflowY)&&n.scrollHeight>n.clientHeight+5)return n;n=n.parentElement;}return document.scrollingElement||document.documentElement;}
-function goTo(id){const target=$('#'+id);if(!target)return;const owner=ownerFor(target);const doc=owner===document.scrollingElement||owner===document.documentElement||owner===document.body;const nav=$('#rg-menu');const offset=id==='rg-menu-anchor'?8:nav.getBoundingClientRect().height+12;
- const start=doc?window.scrollY:owner.scrollTop;const orect=doc?{top:0}:owner.getBoundingClientRect();const dest=Math.max(0,start+target.getBoundingClientRect().top-orect.top-offset);if(scrollJob)cancelAnimationFrame(scrollJob);if(reduced()){if(doc)window.scrollTo(0,dest);else owner.scrollTop=dest;return;}
- const begin=performance.now();function frame(t){const p=Math.min(1,(t-begin)/700);const eased=p<.5?4*p*p*p:1-Math.pow(-2*p+2,3)/2;const next=start+(dest-start)*eased;if(doc)window.scrollTo(0,next);else owner.scrollTop=next;if(p<1)scrollJob=requestAnimationFrame(frame);else scrollJob=null;}scrollJob=requestAnimationFrame(frame);
-}
+ // Native scrollIntoView is intentionally used here: unlike window.scrollTo(),
+ // it can move the host page to the section even when the 6200px CMS iframe
+ // has no internal vertical scroll range (same approach as the working RG page).
+function goTo(id){const target=$('#'+id);if(!target)return;target.scrollIntoView({behavior:reduced()?'auto':'smooth',block:'start',inline:'nearest'});}
+ const menuList=$('#rg-menu-list'),menu=$('#rg-menu'),menuThumb=$('#rg-menu-scrollthumb');
+ const menuPrev=$('#rg-menu-prev'),menuNext=$('#rg-menu-next');
+ function updateMenuScroller(){
+  const max=Math.max(0,menuList.scrollWidth-menuList.clientWidth),overflow=max>3;
+  menu.classList.toggle('has-overflow',overflow);
+  if(!overflow){menuThumb.style.width='100%';menuThumb.style.left='0%';}
+  else{const w=Math.max(12,100*menuList.clientWidth/menuList.scrollWidth);menuThumb.style.width=w+'%';menuThumb.style.left=(menuList.scrollLeft/max*(100-w))+'%';}
+  menuPrev.disabled=!overflow||menuList.scrollLeft<=2;
+  menuNext.disabled=!overflow||menuList.scrollLeft>=max-2;
+ }
+ menuList.addEventListener('scroll',updateMenuScroller,{passive:true});
+ menuPrev.addEventListener('click',()=>menuList.scrollBy({left:-Math.max(210,menuList.clientWidth*.6),behavior:reduced()?'auto':'smooth'}));
+ menuNext.addEventListener('click',()=>menuList.scrollBy({left:Math.max(210,menuList.clientWidth*.6),behavior:reduced()?'auto':'smooth'}));
+ window.addEventListener('resize',()=>{updateMenuScroller();updateArrows();});
+ window.addEventListener('load',()=>{updateMenuScroller();updateArrows();});
+ requestAnimationFrame(()=>{updateMenuScroller();updateArrows();});
 root.addEventListener('click',e=>{const b=e.target.closest('button[data-go]');if(!b||!root.contains(b))return;const id=b.dataset.go;goTo(id);if(b.closest('.rg-menu')){$$('.rg-menu button').forEach(x=>x.classList.toggle('is-active',x===b))}});
 function csvValue(v){const s=String(v??'');return /[",\r\n]/.test(s)?'"'+s.replace(/"/g,'""')+'"':s;}
 function downloadBlob(blob,filename){const u=URL.createObjectURL(blob);const a=document.createElement('a');a.href=u;a.download=filename;a.style.display='none';root.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),1200)}
