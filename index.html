@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Explore NFL Thanksgiving Day losses from 1999 through 2025, including a six-condition index, the five highest-ranked teams, complete rankings and research methodology.">
+<title>NFL Thanksgiving Curse Index | RotoGrinders Research</title>
+<style>
+#rg-thanksgiving-root{--rg-navy:#101820;--rg-blue:#2879fe;--rg-deep:#155fcf;--rg-ice:#eef5ff;--rg-paper:#f6f9fd;--rg-border:#dce5ef;--rg-ink:#142536;--rg-muted:#536577;--rg-radius:2px;width:100%;max-width:1320px;margin:0 auto;background:#fff;color:var(--rg-ink);font:17px/1.62 Arial,Helvetica,sans-serif;isolation:isolate}
+#rg-thanksgiving-root *,#rg-thanksgiving-root *::before,#rg-thanksgiving-root *::after{box-sizing:border-box}
+#rg-thanksgiving-root button,#rg-thanksgiving-root input{font:inherit}
+#rg-thanksgiving-root button{cursor:pointer}
+#rg-thanksgiving-root button:focus-visible,#rg-thanksgiving-root a:focus-visible,#rg-thanksgiving-root input:focus-visible{outline:3px solid #77adff;outline-offset:3px}
+#rg-thanksgiving-root ::-webkit-scrollbar{height:8px;width:8px}
+#rg-thanksgiving-root ::-webkit-scrollbar-track{background:#e9f0f9}
+#rg-thanksgiving-root ::-webkit-scrollbar-thumb{background:#2879fe;border:1px solid #e9f0f9;border-radius:6px}
+#rg-thanksgiving-root .rg-scroll,#rg-thanksgiving-root .rg-menu-list{scrollbar-width:thin;scrollbar-color:#2879fe #e9f0f9}
+#rg-thanksgiving-root .rg-overview{background:#101820;color:#fff;border-bottom:4px solid var(--rg-blue)}
+#rg-thanksgiving-root .rg-overview-top{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px clamp(16px,3vw,32px);border-bottom:1px solid rgba(255,255,255,.12)}
+#rg-thanksgiving-root .rg-wordmark{font-size:20px;font-weight:900;letter-spacing:-.045em;color:#fff;line-height:1.2}
+#rg-thanksgiving-root .rg-wordmark span{color:#75b0ff}
+#rg-thanksgiving-root .rg-overview-context{font-size:13px;font-weight:700;color:#c3d1e4;text-align:right}
+#rg-thanksgiving-root .rg-stat-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));background:#162330;gap:1px;padding:1px}
+#rg-thanksgiving-root .rg-stat{background:#101820;padding:19px clamp(12px,2.2vw,27px) 20px;min-width:0}
+#rg-thanksgiving-root .rg-stat strong{display:block;color:#fff;font-size:clamp(29px,3.5vw,45px);font-weight:900;line-height:1.08;letter-spacing:-.04em;font-variant-numeric:tabular-nums}
+#rg-thanksgiving-root .rg-stat:first-child strong{color:#83b6ff}
+#rg-thanksgiving-root .rg-stat span{display:block;margin-top:7px;color:#b8c7d7;font-size:13px;line-height:1.3;font-weight:600}
+#rg-thanksgiving-root .rg-menu-anchor{height:1px;pointer-events:none}
+#rg-thanksgiving-root .rg-menu{position:sticky;top:0;z-index:45;display:flex;align-items:center;background:#fff;border-bottom:1px solid var(--rg-border);box-shadow:0 7px 20px rgba(16,24,32,.065);min-width:0}
+#rg-thanksgiving-root .rg-menu-list{width:100%;display:flex;align-items:stretch;gap:5px;overflow-x:auto;padding:9px clamp(13px,2.5vw,27px);scroll-behavior:smooth}
+#rg-thanksgiving-root .rg-menu button{flex:0 0 auto;border:1px solid transparent;color:#334f6a;background:transparent;white-space:nowrap;padding:10px 14px;min-height:42px;font-size:14px;font-weight:800;transition:background .16s,color .16s}
+#rg-thanksgiving-root .rg-menu button:hover,#rg-thanksgiving-root .rg-menu button.is-active{background:var(--rg-ice);color:var(--rg-deep);border-color:#cce0ff}
+#rg-thanksgiving-root .rg-section{padding:clamp(30px,4vw,48px) clamp(16px,3vw,34px);border-bottom:1px solid var(--rg-border);scroll-margin-top:72px}
+#rg-thanksgiving-root .rg-section.is-paper{background:var(--rg-paper)}
+#rg-thanksgiving-root .rg-section-heading{margin:0 0 7px;font-size:clamp(27px,3.2vw,38px);font-weight:900;line-height:1.14;letter-spacing:-.035em;color:var(--rg-navy)}
+#rg-thanksgiving-root .rg-section-heading::before{content:"";display:inline-block;width:6px;height:.84em;background:var(--rg-blue);vertical-align:-.09em;margin-right:13px}
+#rg-thanksgiving-root .rg-sub{margin:0 0 22px;color:var(--rg-muted);font-size:clamp(16px,1.5vw,18px);line-height:1.56;max-width:1000px}
+#rg-thanksgiving-root .rg-feature{background:#111e2b;border:1px solid #29425a;border-top:4px solid var(--rg-blue);color:#fff;box-shadow:0 20px 40px rgba(16,24,32,.11)}
+#rg-thanksgiving-root .rg-feature-header{padding:20px clamp(15px,2.5vw,28px) 0;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:15px}
+#rg-thanksgiving-root .rg-feature-title{margin:0;color:#fff;font-size:21px;font-weight:900}
+#rg-thanksgiving-root .rg-feature-eyebrow{display:block;color:#9fb9d7;font-size:13px;font-weight:700;margin-bottom:3px}
+#rg-thanksgiving-root .rg-chart-download,#rg-thanksgiving-root .rg-action{border:1px solid #357ce9;background:#2879fe;color:#fff;padding:11px 15px;font-size:14px;font-weight:800;min-height:43px;transition:background .15s,transform .15s}
+#rg-thanksgiving-root .rg-chart-download:hover,#rg-thanksgiving-root .rg-action:hover{background:#155fcf;transform:translateY(-1px)}
+#rg-thanksgiving-root .rg-tabs{display:flex;gap:7px;flex-wrap:wrap;padding:18px clamp(15px,2.5vw,28px) 4px}
+#rg-thanksgiving-root .rg-tab{border:1px solid #48637f;background:#1b2b3c;color:#d0deed;padding:10px 15px;font-size:14px;font-weight:800;min-height:44px;transition:background .15s,color .15s}
+#rg-thanksgiving-root .rg-tab[aria-selected="true"]{background:#fff;border-color:#fff;color:#12375f;box-shadow:inset 0 -4px 0 var(--rg-blue)}
+#rg-thanksgiving-root .rg-tab:hover:not([aria-selected="true"]){background:#29435f;color:#fff}
+#rg-thanksgiving-root .rg-feature-content{display:grid;grid-template-columns:minmax(0,1.8fr) minmax(245px,.82fr);gap:0;margin:15px clamp(15px,2.5vw,28px) 23px;border:1px solid #3a5269}
+#rg-thanksgiving-root .rg-bar-list{min-width:0;padding:12px clamp(12px,2vw,22px) 13px}
+#rg-thanksgiving-root .rg-bar-row{display:grid;grid-template-columns:minmax(140px,210px) minmax(75px,1fr) 55px;align-items:center;gap:13px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+#rg-thanksgiving-root .rg-bar-row:last-child{border-bottom:none}
+#rg-thanksgiving-root .rg-bar-label{font-size:15px;font-weight:800;line-height:1.3;color:#fff}
+#rg-thanksgiving-root .rg-bar-label small{display:block;margin-top:3px;font-size:12px;color:#a8bbcd;font-weight:500}
+#rg-thanksgiving-root .rg-track{height:15px;background:#354960;overflow:hidden;position:relative}
+#rg-thanksgiving-root .rg-fill{display:block;height:100%;width:0;background:linear-gradient(90deg,#2879fe,#86b8ff);transition:width .8s cubic-bezier(.22,.76,.15,1)}
+#rg-thanksgiving-root .rg-bar-row:first-child .rg-fill{background:linear-gradient(90deg,#519aff,#a7cbff)}
+#rg-thanksgiving-root .rg-bar-value{text-align:center;font-size:22px;font-weight:900;color:#fff;font-variant-numeric:tabular-nums}
+#rg-thanksgiving-root .rg-spotlight{border-left:1px solid #3a5269;background:linear-gradient(130deg,#16293d,#112031);padding:24px 22px;display:flex;flex-direction:column;justify-content:center}
+#rg-thanksgiving-root .rg-spotlight-label{font-size:13px;color:#bed2e7;font-weight:800}
+#rg-thanksgiving-root .rg-spotlight-number{font-size:clamp(60px,7vw,87px);font-weight:900;line-height:1.12;color:#7bb1ff;font-variant-numeric:tabular-nums;letter-spacing:-.07em}
+#rg-thanksgiving-root .rg-spotlight-team{font-size:21px;line-height:1.25;font-weight:900;color:#fff}
+#rg-thanksgiving-root .rg-spotlight p{margin:11px 0 0;color:#bccfe0;font-size:14px;line-height:1.6}
+#rg-thanksgiving-root .rg-feature-foot{padding:0 clamp(15px,2.5vw,28px) 18px;margin:0;color:#bed0e0;font-size:13px;line-height:1.5}
+#rg-thanksgiving-root .rg-top-stack{display:grid;gap:12px}
+#rg-thanksgiving-root .rg-top-card{display:flex;align-items:stretch;gap:18px;background:#fff;border:1px solid #d7e3ef;border-left:5px solid var(--rg-blue);padding:21px 22px;box-shadow:0 7px 23px rgba(12,31,52,.04)}
+#rg-thanksgiving-root .rg-top-card.rg-first{background:#101e2e;border-color:#263d55;border-left-color:#6ba8ff;color:#fff}
+#rg-thanksgiving-root .rg-rankmedal{width:51px;min-width:51px;height:51px;display:grid;place-items:center;background:#e9f3ff;color:#155fcf;font-size:23px;font-weight:900}
+#rg-thanksgiving-root .rg-first .rg-rankmedal{background:#2879fe;color:#fff}
+#rg-thanksgiving-root .rg-top-main{min-width:0;flex:1}
+#rg-thanksgiving-root .rg-top-heading{display:flex;justify-content:space-between;align-items:center;gap:12px 20px;flex-wrap:wrap}
+#rg-thanksgiving-root .rg-top-heading h3{margin:0;font-size:clamp(21px,2.2vw,27px);line-height:1.2;letter-spacing:-.025em;color:var(--rg-navy)}
+#rg-thanksgiving-root .rg-first .rg-top-heading h3{color:#fff}
+#rg-thanksgiving-root .rg-top-score{display:flex;align-items:baseline;gap:9px}
+#rg-thanksgiving-root .rg-top-score strong{font-size:38px;line-height:1;font-weight:900;color:#155fcf;font-variant-numeric:tabular-nums}
+#rg-thanksgiving-root .rg-first .rg-top-score strong{color:#8cbaff}
+#rg-thanksgiving-root .rg-top-score span{font-size:13px;color:#65798d;font-weight:800}
+#rg-thanksgiving-root .rg-first .rg-top-score span{color:#c4d5e8}
+#rg-thanksgiving-root .rg-top-card p{margin:10px 0 0;color:#43576b;font-size:16px;line-height:1.58}
+#rg-thanksgiving-root .rg-first p{color:#d1dceb}
+#rg-thanksgiving-root .rg-chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:13px}
+#rg-thanksgiving-root .rg-chips span{padding:6px 9px;background:#eef5ff;border:1px solid #d5e5fa;color:#435c73;font-size:12px;line-height:1.3}
+#rg-thanksgiving-root .rg-chips b{color:#155fcf}
+#rg-thanksgiving-root .rg-first .rg-chips span{background:#1b3045;border-color:#3b5570;color:#d2e2f1}
+#rg-thanksgiving-root .rg-first .rg-chips b{color:#8cbaff}
+#rg-thanksgiving-root .rg-exposure{margin:17px 0 0;padding:14px 17px;background:#eef5ff;border-left:4px solid #2879fe;color:#35516b;font-size:15px}
+#rg-thanksgiving-root .rg-data-controls{display:flex;gap:12px;align-items:end;justify-content:space-between;flex-wrap:wrap;margin:0 0 16px}
+#rg-thanksgiving-root .rg-search-wrap{flex:1 1 260px;max-width:450px;min-width:0}
+#rg-thanksgiving-root .rg-formlabel{display:block;margin:0 0 5px;font-size:13px;font-weight:800;color:#314d67}
+#rg-thanksgiving-root .rg-search{width:100%;min-height:46px;padding:11px 14px;background:#fff;border:1px solid #a7bfd9;color:#152b3c;border-radius:0;font-size:16px}
+#rg-thanksgiving-root .rg-search:focus{border-color:#2879fe}
+#rg-thanksgiving-root .rg-filter-group{display:flex;gap:5px;flex-wrap:wrap;align-items:center}
+#rg-thanksgiving-root .rg-filter{min-height:45px;padding:10px 12px;background:#fff;border:1px solid #bcd0e3;color:#3b5064;font-weight:800;font-size:14px}
+#rg-thanksgiving-root .rg-filter[aria-pressed="true"]{background:#101820;color:#fff;border-color:#101820}
+#rg-thanksgiving-root .rg-filter:hover:not([aria-pressed="true"]){background:#eaf2ff;color:#155fcf}
+#rg-thanksgiving-root .rg-table-frame{background:#fff;border:1px solid #d7e4f2;box-shadow:0 13px 30px rgba(16,24,32,.055)}
+#rg-thanksgiving-root .rg-table-tools{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;padding:14px 16px;background:#f0f6fd;border-bottom:1px solid #d7e4f2}
+#rg-thanksgiving-root .rg-table-help{font-size:13px;color:#4b6278;line-height:1.45}
+#rg-thanksgiving-root .rg-table-help b{color:#243e59}
+#rg-thanksgiving-root .rg-tool-actions{display:flex;gap:7px;flex-wrap:wrap;align-items:center;justify-content:flex-end}
+#rg-thanksgiving-root .rg-action{padding:10px 12px;font-size:13px;min-height:42px}
+#rg-thanksgiving-root #rg-arrow-left{margin-left:auto}
+#rg-thanksgiving-root .rg-arrow{height:42px;width:43px;display:grid;place-items:center;border:1px solid #b1c9e4;background:#fff;color:#155fcf;font-size:23px;font-weight:800;line-height:1}
+#rg-thanksgiving-root .rg-arrow:disabled{opacity:.35;cursor:default}
+#rg-thanksgiving-root .rg-arrow:hover:not(:disabled){background:#dfefff}
+#rg-thanksgiving-root .rg-scroll{overflow-x:auto;max-width:100%;width:100%;scroll-behavior:smooth;overscroll-behavior-inline:contain;scrollbar-width:thin;scrollbar-color:#2879fe #e9f0f9}
+#rg-thanksgiving-root .rg-table{width:100%;min-width:1870px;border-collapse:separate;border-spacing:0;table-layout:fixed;font-size:14px;font-variant-numeric:tabular-nums}
+#rg-thanksgiving-root .rg-table col:nth-child(1){width:90px}
+#rg-thanksgiving-root .rg-table col:nth-child(2){width:222px}
+#rg-thanksgiving-root .rg-table col:nth-child(3){width:130px}
+#rg-thanksgiving-root .rg-table col:nth-child(4){width:94px}
+#rg-thanksgiving-root .rg-table col:nth-child(5){width:152px}
+#rg-thanksgiving-root .rg-table col:nth-child(6){width:164px}
+#rg-thanksgiving-root .rg-table col:nth-child(7){width:158px}
+#rg-thanksgiving-root .rg-table col:nth-child(8){width:172px}
+#rg-thanksgiving-root .rg-table col:nth-child(9){width:174px}
+#rg-thanksgiving-root .rg-table col:nth-child(10){width:180px}
+#rg-thanksgiving-root .rg-table col:nth-child(11){width:117px}
+#rg-thanksgiving-root .rg-table col:nth-child(12){width:174px}
+#rg-thanksgiving-root .rg-table th{background:#101820;color:#fff;padding:10px 6px;position:relative;border-right:1px solid #2c4156;border-bottom:3px solid #2879fe;vertical-align:middle;font-size:13px;font-weight:800;line-height:1.25}
+#rg-thanksgiving-root .rg-table th.rg-descriptive{text-align:left}
+#rg-thanksgiving-root .rg-th-inner{display:flex;align-items:center;justify-content:center;gap:0;min-height:53px}
+#rg-thanksgiving-root .rg-table th.rg-descriptive .rg-th-inner{justify-content:flex-start}
+#rg-thanksgiving-root .rg-sort-button{border:0;background:transparent;color:inherit;padding:6px 3px;min-height:32px;display:inline-flex;align-items:center;justify-content:center;gap:5px;font-weight:800;font-size:12px;line-height:1.22;text-align:center;white-space:normal}
+#rg-thanksgiving-root .rg-table th.rg-descriptive .rg-sort-button{text-align:left;justify-content:flex-start}
+#rg-thanksgiving-root .rg-sort-icon{color:#80b9ff;font-size:13px;flex:0 0 auto}
+#rg-thanksgiving-root .rg-sort-button:hover{color:#bcd8ff}
+#rg-thanksgiving-root .rg-info-button{position:relative;border:0;background:transparent;padding:4px;flex:0 0 25px;min-width:25px;min-height:28px;display:grid;place-items:center;color:#9cc6ff}
+#rg-thanksgiving-root .rg-info-glyph{width:15px;height:15px;border-radius:50%;border:1.4px solid currentColor;display:grid;place-items:center;font-size:10px;font-family:Georgia,serif;font-weight:900;font-style:normal;line-height:1}
+#rg-thanksgiving-root .rg-info-button:hover,#rg-thanksgiving-root .rg-info-button:focus-visible{color:#fff}
+#rg-thanksgiving-root .rg-table td{padding:13px 8px;border-bottom:1px solid #e4ebf4;background:#fff;color:#253d51;text-align:center;font-size:14px;white-space:nowrap}
+#rg-thanksgiving-root .rg-table td.rg-descriptive{text-align:left;white-space:normal;line-height:1.35;font-weight:800}
+#rg-thanksgiving-root .rg-table tbody tr:nth-child(even) td{background:#f7faff}
+#rg-thanksgiving-root .rg-table tbody tr:hover td{background:#eaf3ff}
+#rg-thanksgiving-root .rg-table tbody td:nth-child(1){font-weight:900;color:#256acb}
+#rg-thanksgiving-root .rg-table tbody td:nth-child(11){font-weight:900;font-size:17px;color:#155fcf}
+#rg-thanksgiving-root .rg-table thead th:nth-child(1),#rg-thanksgiving-root .rg-table tbody td:nth-child(1){position:sticky;left:0;z-index:4}
+#rg-thanksgiving-root .rg-table thead th:nth-child(2),#rg-thanksgiving-root .rg-table tbody td:nth-child(2){position:sticky;left:90px;z-index:4;box-shadow:5px 0 8px -8px #102a4c}
+#rg-thanksgiving-root .rg-table thead th:nth-child(1),#rg-thanksgiving-root .rg-table thead th:nth-child(2){z-index:6;background:#101820}
+#rg-thanksgiving-root .rg-table-note{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding:14px 16px;border-top:1px solid #dae4f0;color:#5b7084;font-size:13px}
+#rg-thanksgiving-root .rg-pager{display:flex;align-items:center;gap:7px;flex-wrap:wrap}
+#rg-thanksgiving-root .rg-page{min-height:37px;min-width:38px;padding:7px 11px;color:#194d8d;background:#fff;border:1px solid #bfcee0;font-size:14px;font-weight:800}
+#rg-thanksgiving-root .rg-page[aria-current="page"]{color:#fff;background:#101820;border-color:#101820}
+#rg-thanksgiving-root .rg-page:disabled{opacity:.35;cursor:default}
+#rg-thanksgiving-root .rg-page:hover:not(:disabled):not([aria-current]){background:#eaf2ff}
+#rg-thanksgiving-root .rg-empty{text-align:center!important;padding:34px!important;color:#536a81!important}
+#rg-thanksgiving-root .rg-tooltip{position:fixed;z-index:1000;top:0;left:0;max-width:min(305px,calc(100vw - 24px));width:max-content;white-space:normal;opacity:0;pointer-events:none;visibility:hidden;padding:12px 15px;border-left:4px solid #5aa0ff;background:#0f2237;color:#fff;font-size:13px;line-height:1.5;box-shadow:0 17px 36px rgba(3,20,41,.3);transition:opacity .12s}
+#rg-thanksgiving-root .rg-tooltip.is-visible{visibility:visible;opacity:1}
+#rg-thanksgiving-root .rg-tooltip::after{content:"";position:absolute;left:var(--rg-arrow-x,50%);transform:translateX(-50%);border:7px solid transparent}
+#rg-thanksgiving-root .rg-tooltip[data-placement="top"]::after{top:100%;border-top-color:#0f2237}
+#rg-thanksgiving-root .rg-tooltip[data-placement="bottom"]::after{bottom:100%;border-bottom-color:#0f2237}
+#rg-thanksgiving-root .rg-method{margin-top:6px}
+#rg-thanksgiving-root .rg-method-item{padding:20px 0;border-top:1px solid #dbe5ef}
+#rg-thanksgiving-root .rg-method-item h3{font-size:20px;line-height:1.3;font-weight:900;margin:0 0 7px;color:#101820}
+#rg-thanksgiving-root .rg-method-item p{margin:0;color:#4b6074;font-size:16px;line-height:1.66}
+#rg-thanksgiving-root .rg-method-item a{color:#155fcf;font-weight:800}
+#rg-thanksgiving-root .rg-conditions-wrap{display:grid;gap:14px;margin-top:14px}
+#rg-thanksgiving-root .rg-weight-callout{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;padding:16px 18px;border:1px solid #dbe5ef;border-left:4px solid #2879fe;background:#eef5ff}
+#rg-thanksgiving-root .rg-weight-stat{min-width:0;padding:12px 13px;border:1px solid #d2e2f4;background:#fff}
+#rg-thanksgiving-root .rg-weight-label{display:block;margin:0 0 6px;color:#52677c;font-size:12px;font-weight:800;letter-spacing:.02em}
+#rg-thanksgiving-root .rg-weight-stat strong{display:block;color:#101820;font-size:21px;line-height:1.2;font-weight:900}
+#rg-thanksgiving-root .rg-weight-stat small{display:block;margin-top:6px;color:#4b6074;font-size:13px;line-height:1.45}
+#rg-thanksgiving-root .rg-condition-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+#rg-thanksgiving-root .rg-condition-card{padding:14px 15px;border:1px solid #dbe5ef;background:#fff;box-shadow:0 4px 14px rgba(16,24,32,.04)}
+#rg-thanksgiving-root .rg-condition-card b{display:flex;align-items:center;gap:9px;color:#101820;font-size:16px;line-height:1.35;font-weight:900}
+#rg-thanksgiving-root .rg-condition-card b span{display:inline-flex;align-items:center;justify-content:center;min-width:28px;height:28px;padding:0 8px;background:#101820;color:#fff;font-size:14px;font-weight:900}
+#rg-thanksgiving-root .rg-condition-card p{margin:9px 0 0;color:#4b6074;font-size:14px;line-height:1.55}
+#rg-thanksgiving-root .rg-method-inline-note{padding:14px 16px;border-left:4px solid #2879fe;background:#f5f8fc;color:#435a70;font-size:14px;line-height:1.6}
+#rg-thanksgiving-root .rg-method-note{padding:15px 19px;margin:20px 0 0;border-left:4px solid #2879fe;background:#eef5ff;color:#405d75;font-size:15px}
+#rg-thanksgiving-root .rg-return{display:flex;align-items:center;justify-content:center;width:100%;margin:22px auto 0;text-align:center}
+#rg-thanksgiving-root .rg-back{min-height:44px;display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1px solid #155fcf;background:#eef5ff;color:#155fcf;font-size:14px;font-weight:800;padding:11px 20px}
+#rg-thanksgiving-root .rg-back:hover{background:#155fcf;color:#fff}
+#rg-thanksgiving-root .rg-footer{padding:20px clamp(16px,3vw,34px);border-top:3px solid #2879fe;background:#101820;color:#b4c9da;font-size:13px}
+#rg-thanksgiving-root .rg-footer b{color:#fff}
+@media(max-width:850px){#rg-thanksgiving-root .rg-feature-content{grid-template-columns:1fr}#rg-thanksgiving-root .rg-spotlight{border-left:0;border-top:1px solid #3a5269;padding:16px 22px}#rg-thanksgiving-root .rg-spotlight-number{font-size:52px}#rg-thanksgiving-root .rg-bar-row{grid-template-columns:minmax(122px,195px) minmax(50px,1fr) 44px;gap:10px}#rg-thanksgiving-root .rg-bar-value{font-size:19px}}
+@media(max-width:600px){#rg-thanksgiving-root{font-size:16px}#rg-thanksgiving-root .rg-stat-grid{grid-template-columns:repeat(2,minmax(0,1fr))}#rg-thanksgiving-root .rg-stat{padding:14px 14px 16px}#rg-thanksgiving-root .rg-stat strong{font-size:32px}#rg-thanksgiving-root .rg-overview-top{padding:11px 15px}#rg-thanksgiving-root .rg-overview-context{font-size:11px}#rg-thanksgiving-root .rg-menu-list{padding:7px 10px}#rg-thanksgiving-root .rg-menu button{font-size:13px;padding:10px 11px}#rg-thanksgiving-root .rg-feature-header{align-items:flex-start}#rg-thanksgiving-root .rg-chart-download{width:100%;text-align:center}#rg-thanksgiving-root .rg-tabs{gap:5px}#rg-thanksgiving-root .rg-tab{padding:9px 11px;font-size:12.5px}#rg-thanksgiving-root .rg-bar-row{grid-template-columns:minmax(115px,43%) minmax(30px,1fr) 30px;gap:7px;padding:12px 0}#rg-thanksgiving-root .rg-bar-label{font-size:13px}#rg-thanksgiving-root .rg-bar-label small{font-size:11px}#rg-thanksgiving-root .rg-bar-value{font-size:17px}#rg-thanksgiving-root .rg-track{height:12px}#rg-thanksgiving-root .rg-top-card{padding:17px 13px;gap:10px}#rg-thanksgiving-root .rg-rankmedal{width:37px;min-width:37px;height:37px;font-size:17px}#rg-thanksgiving-root .rg-top-score strong{font-size:30px}#rg-thanksgiving-root .rg-top-card p{font-size:15px}#rg-thanksgiving-root .rg-filter-group{width:100%}#rg-thanksgiving-root .rg-filter{flex:1;padding:10px 7px;font-size:12px}#rg-thanksgiving-root .rg-search-wrap{max-width:none}#rg-thanksgiving-root .rg-table-tools{padding:12px}#rg-thanksgiving-root .rg-table-help{width:100%}#rg-thanksgiving-root .rg-tool-actions{justify-content:flex-start;width:100%}#rg-thanksgiving-root .rg-table th:first-child .rg-info-button{display:none}#rg-thanksgiving-root .rg-table thead th:nth-child(2),#rg-thanksgiving-root .rg-table tbody td:nth-child(2){left:62px}#rg-thanksgiving-root .rg-table col:nth-child(1){width:62px}#rg-thanksgiving-root .rg-table col:nth-child(2){width:175px}#rg-thanksgiving-root .rg-table{min-width:1800px}#rg-thanksgiving-root .rg-table td{padding:12px 6px}#rg-thanksgiving-root .rg-table-note{align-items:flex-start}#rg-thanksgiving-root .rg-method-item h3{font-size:18px}#rg-thanksgiving-root .rg-weight-callout,#rg-thanksgiving-root .rg-condition-grid{grid-template-columns:1fr}#rg-thanksgiving-root .rg-weight-stat strong{font-size:19px}}
+@media(prefers-reduced-motion:reduce){#rg-thanksgiving-root .rg-fill,#rg-thanksgiving-root .rg-action,#rg-thanksgiving-root .rg-tab,#rg-thanksgiving-root .rg-chart-download,#rg-thanksgiving-root .rg-scroll{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body style="margin:0;background:#fff">
+<main id="rg-thanksgiving-root" aria-label="NFL Thanksgiving Curse Index research">
+  <div class="rg-overview" aria-label="Study at a glance">
+    <div class="rg-overview-top"><div class="rg-wordmark" aria-label="RotoGrinders">Roto<span>Grinders</span></div><span class="rg-overview-context">NFL Thanksgiving Day research · 1999–2025</span></div>
+    <div class="rg-stat-grid">
+      <div class="rg-stat"><strong class="rg-animate-number" data-value="73" data-format="int">73</strong><span>Thanksgiving games analyzed</span></div>
+      <div class="rg-stat"><strong class="rg-animate-number" data-value="27" data-format="int">27</strong><span>NFL seasons in scope</span></div>
+      <div class="rg-stat"><strong class="rg-animate-number" data-value="29" data-format="int">29</strong><span>Franchises that played</span></div>
+      <div class="rg-stat"><strong class="rg-animate-number" data-value="6" data-format="int">6</strong><span>Scoring metrics measured</span></div>
+    </div>
+  </div>
+  <div id="rg-menu-anchor" class="rg-menu-anchor" aria-hidden="true"></div>
+  <nav id="rg-menu" class="rg-menu" aria-label="Research sections"><div class="rg-menu-list">
+    <button type="button" data-go="rg-widget" class="is-active">Explore the index</button>
+    <button type="button" data-go="rg-top5">Top five teams</button>
+    <button type="button" data-go="rg-full">Full rankings</button>
+    <button type="button" data-go="rg-methodology">Methodology</button>
+  </div></nav>
+  <section class="rg-section" id="rg-widget" aria-labelledby="rg-widget-title">
+    <h2 class="rg-section-heading" id="rg-widget-title">How the five leaders compare</h2>
+    <p class="rg-sub">The index counts six types of disappointing Thanksgiving losses. Explore how its five highest-ranked teams compare by qualifying conditions, distinct qualifying games, and all holiday losses.</p>
+    <div class="rg-feature">
+      <div class="rg-feature-header"><div><span class="rg-feature-eyebrow">Interactive comparison · 1999–2025</span><h3 class="rg-feature-title" id="rg-chart-title">Total qualifying loss conditions</h3></div><button type="button" id="rg-chart-export" class="rg-chart-download">Download chart PNG</button></div>
+      <div class="rg-tabs" role="tablist" aria-label="Comparison metric">
+        <button type="button" role="tab" class="rg-tab" data-metric="Total" aria-selected="true">Curse points</button>
+        <button type="button" role="tab" class="rg-tab" data-metric="Devastating Losses (games)" aria-selected="false">Qualifying losses</button>
+        <button type="button" role="tab" class="rg-tab" data-metric="Losses" aria-selected="false">All holiday losses</button>
+      </div>
+      <div class="rg-feature-content"><div id="rg-comparison-bars" class="rg-bar-list" aria-live="polite"></div>
+        <div class="rg-spotlight"><span class="rg-spotlight-label" id="rg-spotlight-label">Highest total</span><strong class="rg-spotlight-number rg-animate-number" id="rg-spotlight-num" data-value="17" data-format="int">17</strong><div class="rg-spotlight-team" id="rg-spotlight-team">Dallas Cowboys</div><p id="rg-spotlight-copy">Dallas has 17 qualifying conditions across nine distinct losses.</p></div>
+      </div>
+      <p class="rg-feature-foot" id="rg-chart-foot">A single game can meet multiple conditions. Curse points sum those conditions; they are not a count of separate losses or a per-game rate.</p>
+    </div>
+    <div class="rg-return"><button type="button" class="rg-back" data-go="rg-menu-anchor">↑ Back to Menu</button></div>
+  </section>
+  <section class="rg-section is-paper" id="rg-top5" aria-labelledby="rg-top-title">
+    <h2 class="rg-section-heading" id="rg-top-title">The five highest-ranked teams</h2>
+    <p class="rg-sub">The ranking uses the total number of qualifying conditions across all Thanksgiving defeats from 1999 to 2025. Ties share a position; these five teams have distinct scores.</p>
+    <div class="rg-top-stack"><article class="rg-top-card rg-first"><div class="rg-rankmedal">01</div><div class="rg-top-main"><div class="rg-top-heading"><h3>Dallas Cowboys</h3><div class="rg-top-score"><strong class="rg-animate-number" data-value="17" data-format="int" aria-label="17 qualifying conditions">17</strong><span>Curse points</span></div></div><p>Dallas has 17 qualifying conditions across nine separate losses. Five came as a betting favorite, and five came despite gaining more offensive yards.</p><div class="rg-chips"><span><b>9</b> distinct qualifying losses</span><span><b>27</b> Thanksgiving games</span><span><b>12</b> total losses</span></div></div></article>
+<article class="rg-top-card"><div class="rg-rankmedal">02</div><div class="rg-top-main"><div class="rg-top-heading"><h3>Detroit Lions</h3><div class="rg-top-score"><strong class="rg-animate-number" data-value="16" data-format="int" aria-label="16 qualifying conditions">16</strong><span>Curse points</span></div></div><p>Detroit has the most Thanksgiving losses in the sample (19) and the most distinct qualifying defeats (10). Seven losses came despite gaining more offensive yards.</p><div class="rg-chips"><span><b>10</b> distinct qualifying losses</span><span><b>27</b> Thanksgiving games</span><span><b>19</b> total losses</span></div></div></article>
+<article class="rg-top-card"><div class="rg-rankmedal">03</div><div class="rg-top-main"><div class="rg-top-heading"><h3>Green Bay Packers</h3><div class="rg-top-score"><strong class="rg-animate-number" data-value="5" data-format="int" aria-label="5 qualifying conditions">5</strong><span>Curse points</span></div></div><p>Green Bay has five qualifying conditions across three losses, including two losses as a betting favorite and two despite gaining more offensive yards.</p><div class="rg-chips"><span><b>3</b> distinct qualifying losses</span><span><b>10</b> Thanksgiving games</span><span><b>3</b> total losses</span></div></div></article>
+<article class="rg-top-card"><div class="rg-rankmedal">04</div><div class="rg-top-main"><div class="rg-top-heading"><h3>Miami Dolphins</h3><div class="rg-top-score"><strong class="rg-animate-number" data-value="4" data-format="int" aria-label="4 qualifying conditions">4</strong><span>Curse points</span></div></div><p>Miami’s four qualifying conditions all came in one game. Its five Thanksgiving appearances are far fewer than those of annual hosts Dallas and Detroit.</p><div class="rg-chips"><span><b>1</b> distinct qualifying losses</span><span><b>5</b> Thanksgiving games</span><span><b>3</b> total losses</span></div></div></article>
+<article class="rg-top-card"><div class="rg-rankmedal">05</div><div class="rg-top-main"><div class="rg-top-heading"><h3>Kansas City Chiefs</h3><div class="rg-top-score"><strong class="rg-animate-number" data-value="3" data-format="int" aria-label="3 qualifying conditions">3</strong><span>Curse points</span></div></div><p>Kansas City has three qualifying conditions from one loss across just two Thanksgiving appearances, underscoring the difference between a raw total and a rate.</p><div class="rg-chips"><span><b>1</b> distinct qualifying losses</span><span><b>2</b> Thanksgiving games</span><span><b>1</b> total losses</span></div></div></article></div>
+    <p class="rg-exposure"><b>Keep the schedule in mind:</b> Dallas and Detroit each played 27 Thanksgiving games, while Kansas City played two. The ranking compares cumulative totals, not risk per appearance.</p>
+    <div class="rg-return"><button type="button" class="rg-back" data-go="rg-menu-anchor">↑ Back to Menu</button></div>
+  </section>
+  <section class="rg-section" id="rg-full" aria-labelledby="rg-full-title">
+    <h2 class="rg-section-heading" id="rg-full-title">Full NFL Thanksgiving rankings</h2>
+    <p class="rg-sub">Explore all 32 franchises, including three that did not play on Thanksgiving during the study period. Search, filter, and sort the columns, or export the current results.</p>
+    <div class="rg-data-controls"><label class="rg-search-wrap"><span class="rg-formlabel">Find an NFL team</span><input class="rg-search" id="rg-search" type="search" placeholder="Search by team name" autocomplete="off"></label>
+      <div class="rg-filter-group" role="group" aria-label="Filter teams"><button class="rg-filter" type="button" data-filter="all" aria-pressed="true">All 32 teams</button><button class="rg-filter" type="button" data-filter="scored" aria-pressed="false">Scored points</button><button class="rg-filter" type="button" data-filter="nogames" aria-pressed="false">No games</button></div></div>
+    <div class="rg-table-frame"><div class="rg-table-tools"><div class="rg-table-help"><b>Sortable results</b> · Select a heading to sort; hover, focus, or tap its small <span aria-label="information icon">ⓘ</span> for definitions. NR means not ranked.</div>
+      <div class="rg-tool-actions"><button type="button" class="rg-action" id="rg-csv">Download filtered CSV</button><button type="button" class="rg-action" id="rg-png">Download page PNG</button><button type="button" class="rg-arrow" id="rg-arrow-left" aria-label="Scroll table left">←</button><button type="button" class="rg-arrow" id="rg-arrow-right" aria-label="Scroll table right">→</button></div></div>
+      <div class="rg-scroll" id="rg-table-scroll" tabindex="0" aria-label="Scrollable Thanksgiving rankings table"><table class="rg-table" id="rg-results-table"><colgroup><col><col><col><col><col><col><col><col><col><col><col><col></colgroup><thead><tr id="rg-table-head"></tr></thead><tbody id="rg-table-body"></tbody></table></div>
+      <div class="rg-table-note"><span id="rg-result-count" aria-live="polite">Showing 1–15 of 32 teams</span><div class="rg-pager" id="rg-pager" aria-label="Table pages"></div></div></div>
+    <p class="rg-method-note">“Curse points” add all six qualifying conditions. “Distinct qualifying losses” counts games only once even if several conditions applied. Teams with no appearances are not ranked.</p>
+    <div class="rg-return"><button type="button" class="rg-back" data-go="rg-menu-anchor">↑ Back to Menu</button></div>
+  </section>
+  <section class="rg-section is-paper" id="rg-methodology" aria-labelledby="rg-method-title">
+    <h2 class="rg-section-heading" id="rg-method-title">Methodology</h2>
+    <p class="rg-sub">The index measures specific circumstances surrounding NFL Thanksgiving Day defeats, rather than the biggest losses by final score.</p>
+    <div class="rg-method">
+      <div class="rg-method-item"><h3>Period and game selection</h3><p>The study covers 27 NFL seasons from 1999 through 2025. It includes the 73 games actually played on Thanksgiving Day, the fourth Thursday in November: two games per year from 1999 through 2005 and generally three per year from 2006 through 2025. Only two were played on Thanksgiving in 2020 because Ravens–Steelers was postponed. Each game is evaluated from both teams’ perspectives, for 146 team-game records.</p></div>
+      <div class="rg-method-item"><h3>How the curse score is built</h3><p>Only losses can add curse points. The index uses six equal-weight loss conditions. Every condition is worth one point, so there are no weighted metrics and no single condition counts more than another.</p><div class="rg-conditions-wrap"><div class="rg-weight-callout" role="group" aria-label="Six metrics, equal-weight scoring, and no maximum score"><div class="rg-weight-stat"><span class="rg-weight-label">Metrics measured</span><strong>6 loss conditions</strong><small>Six ways a Thanksgiving defeat can qualify.</small></div><div class="rg-weight-stat"><span class="rg-weight-label">Scoring model</span><strong>Equal weights</strong><small>Each qualifying condition adds 1 point.</small></div><div class="rg-weight-stat"><span class="rg-weight-label">Maximum score</span><strong>No cap</strong><small>One loss can earn multiple points.</small></div></div><div class="rg-condition-grid"><div class="rg-condition-card"><b><span>1</span>Late lead lost</b><p>The opponent took the lead for good with 2:00 or less left in the fourth quarter or in overtime.</p></div><div class="rg-condition-card"><b><span>2</span>Close defeat</b><p>The team lost by three points or fewer.</p></div><div class="rg-condition-card"><b><span>3</span>Upset loss</b><p>The team lost while favored by at least three points based on the pregame Vegas line.</p></div><div class="rg-condition-card"><b><span>4</span>Blown 14-point lead</b><p>The team lost after leading by 14 points or more at any point in the game.</p></div><div class="rg-condition-card"><b><span>5</span>Won turnovers, still lost</b><p>The team forced more turnovers than it committed and still lost.</p></div><div class="rg-condition-card"><b><span>6</span>Won yardage, still lost</b><p>The team gained more offensive yards than its opponent and still lost.</p></div></div><p class="rg-method-inline-note">Equal turnovers or equal yardage do not qualify for conditions five and six. A game-tying score by itself does not qualify as a late lead change.</p></div></div>
+      <div class="rg-method-item"><h3>Scoring and ties</h3><p>Each qualifying condition contributes one point, so a single game may contribute multiple points. The index ranks teams by the total number of qualifying conditions in descending order. Teams with equal totals share a rank and appear alphabetically. The separate “Distinct qualifying losses” column counts each qualifying game once, no matter how many conditions it meets.</p></div>
+      <div class="rg-method-item"><h3>Franchise names and participation</h3><p>Franchise histories are combined under current names, including the Oakland and Las Vegas Raiders and Washington’s former team names. The Cleveland Browns, Jacksonville Jaguars, and Los Angeles Rams did not play Thanksgiving games in the 1999–2025 sample; they appear in the complete table without a rank.</p></div>
+      <div class="rg-method-item"><h3>Sources and verification</h3><p>The research uses <a href="https://www.pro-football-reference.com/" target="_blank" rel="noopener noreferrer">Pro-Football-Reference</a> season schedules and individual game box scores for dates, outcomes, scoring progression, pregame Vegas lines, offensive yards, and turnovers. The recorded team-game data were cross-checked against scoring summaries and team statistics; the six conditions were calculated from those records.</p></div>
+      <div class="rg-method-item"><h3>Interpretation and limitations</h3><p>These are raw cumulative counts, not percentages or rates adjusted for appearances. Dallas and Detroit host Thanksgiving games annually and therefore have more opportunities to accumulate points. The index measures selected circumstances around defeats, not team quality, the financial impact of a loss, or which defeat fans considered most painful. The study ends with the 2025 Thanksgiving games and does not include games played afterward.</p></div>
+    </div>
+    <div class="rg-return"><button type="button" class="rg-back" data-go="rg-menu-anchor">↑ Back to Menu</button></div>
+  </section>
+  <footer class="rg-footer"><b>RotoGrinders Research</b> · NFL Thanksgiving games, 1999–2025 · 32 NFL franchises</footer>
+  <div class="rg-tooltip" id="rg-tooltip" role="tooltip" data-placement="top" aria-hidden="true"></div>
+</main>
+<script>
+(function(){
+'use strict';
+const root=document.getElementById('rg-thanksgiving-root');if(!root)return;
+const DATA=[{"Rank":1,"Team":"Dallas Cowboys","Thanksgiving Games":27,"Losses":12,"Last-Minute Defeats":3,"Losses by Three Points or Fewer":4,"Losses as a Betting Favorite":5,"Losses After Leading by 14+ Points":0,"Losses After Winning the Turnover Battle":0,"Losses Despite Gaining More Offensive Yards":5,"Total":17,"Devastating Losses (games)":9},{"Rank":2,"Team":"Detroit Lions","Thanksgiving Games":27,"Losses":19,"Last-Minute Defeats":3,"Losses by Three Points or Fewer":4,"Losses as a Betting Favorite":2,"Losses After Leading by 14+ Points":0,"Losses After Winning the Turnover Battle":0,"Losses Despite Gaining More Offensive Yards":7,"Total":16,"Devastating Losses (games)":10},{"Rank":3,"Team":"Green Bay Packers","Thanksgiving Games":10,"Losses":3,"Last-Minute Defeats":0,"Losses by Three Points or Fewer":0,"Losses as a Betting Favorite":2,"Losses After Leading by 14+ Points":0,"Losses After Winning the Turnover Battle":1,"Losses Despite Gaining More Offensive Yards":2,"Total":5,"Devastating Losses (games)":3},{"Rank":4,"Team":"Miami Dolphins","Thanksgiving Games":5,"Losses":3,"Last-Minute Defeats":1,"Losses by Three Points or Fewer":1,"Losses as a Betting Favorite":0,"Losses After Leading by 14+ Points":0,"Losses After Winning the Turnover Battle":1,"Losses Despite Gaining More Offensive Yards":1,"Total":4,"Devastating Losses (games)":1},{"Rank":5,"Team":"Kansas City Chiefs","Thanksgiving Games":2,"Losses":1,"Last-Minute Defeats":0,"Losses by Three Points or Fewer":1,"Losses as a Betting Favorite":1,"Losses After Leading by 14+ Points":0,"Losses After Winning the Turnover Battle":1,"Losses Despite Gaining More Offensive Yards":0,"Total":3,"Devastating Losses (games)":1},{"Rank":"T-6","Team":"Atlanta Falcons","Thanksgiving Games":4,"Losses":3,"Last-Minute Defeats":0,"Losses by Three Points or Fewer":0,"Losses as a Betting Favorite":0,"Losses After Leading by 14+ Points":0,"Losses After Winning the Turnover Battle":0,"Losses Despite Gaining More Offensive Yards":2,"Total":2,"Devastating Losses (games)":2},{"Rank":"T-6","Team":"Chicago Bears","Thanksgiving Games":8,"Losses":4,"Last-Minute Defeats":0,"Losses by Three Points or Fewer":1,"Losses as a Betting Favorite":0,"Losses After Leading by 14+ Points":0,"Losses After Winning the Turnover Battle":1,"Losses Despite Gaining More Offensive Yards":0,"Total":2,"Devastating Losses (games)":1},{"Rank":"T-6","Team":"Minnesota Vikings","Thanksgiving Games":4,"Losses":1,"Last-Minute Defeats":1,"Losses by Three Points or Fewer":1,"Losses as a Betting Favorite":0,"Losses After Leading by 14+ Points":0,"Losses After Winning the Turnover Battle":0,"Losses Despite Gaining More Offensive Yards":0,"Total":2,"Devastating Losses (games)":1},{"Rank":"T-6","Team":"New England Patriots","Thanksgiving Games":5,"Losses":2,"Last-Minute Defeats":0,"Losses by Three Points or Fewer":0,"Losses as a Betting Favorite":0,"Losses After Leading by 14+ Points":0,"Losses After Winning the Turnover Battle":1,"Losses Despite Gaining More Offensive Yards":1,"Total":2,"Devastating Losses (games)":1},{"Rank":"T-6","Team":"New York Giants","Thanksgiving Games":4,"Losses":4,"Last-Minute Defeats":0,"Losses by Three Points or Fewer":0,"Losses as a Betting Favorite":1,"Losses After Leading by 14+ Points":0,"Losses After Winning the Turnover Battle":1,"Losses Despite Gaining More Offensive Yards":0,"Total":2,"Devastating Losses (games)":2},{"Rank":"T-6","Team":"Pittsburgh Steelers","Thanksgiving Games":2,"Losses":1,"Last-Minute Defeats":0,"Losses by Three Points or Fewer":1,"Losses as a Betting Favorite":0,"Losses After Leading by 14+ Points":0,"Losses After Winning the Turnover Battle":0,"Losses Despite Gaining More Offensive Yards":1,"Total":2,"Devastating Losses (games)":1},{"Rank":"T-12","Team":"Baltimore Ravens","Thanksgiving Games":3,"Losses":1,"Last-Minute Defeats":0,"Losses by Three Points or Fewer":0,"Losses as a Betting Favorite":1,"Losses After Leading by 14+ Points":0,"Losses After Winning the Turnover Battle":0,"Losses Despite Gaining More Offensive Yards":0,"Total":1,"Devastating Losses (games)":1},{"Rank":"T-12","Team":"Las Vegas Raiders","Thanksgiving Games":3,"Losses":2,"Last-Minute Defeats":0,"Losses by Three Points or Fewer":0,"Losses as a Betting Favorite":0,"Losses After Leading by 14+ Points":1,"Losses After Winning the Turnover Battle":0,"Losses Despite Gaining More Offensive Yards":0,"Total":1,"Devastating Losses (games)":1},{"Rank":"T-12","Team":"New Orleans Saints","Thanksgiving Games":4,"Losses":1,"Last-Minute Defeats":0,"Losses by Three Points or Fewer":0,"Losses as a Betting Favorite":0,"Losses After Leading by 14+ Points":0,"Losses After Winning the Turnover Battle":1,"Losses Despite Gaining More Offensive Yards":0,"Total":1,"Devastating Losses (games)":1},{"Rank":"T-12","Team":"Washington Commanders","Thanksgiving Games":7,"Losses":4,"Last-Minute Defeats":0,"Losses by Three Points or Fewer":0,"Losses as a Betting Favorite":0,"Losses After Leading by 14+ Points":0,"Losses After Winning the Turnover Battle":0,"Losses Despite Gaining More Offensive Yards":1,"Total":1,"Devastating Losses (games)":1},{"Rank":"T-16","Team":"Arizona Cardinals","Thanksgiving Games":1,"Losses":1,"Last-Minute Defeats":0,"Losses by Three Points or Fewer":0,"Losses as a Betting Favorite":0,"Losses After Leading by 14+ Points":0,"Losses After Winning the Turnover Battle":0,"Losses Despite Gaining More Offensive Yards":0,"Total":0,"Devastating Losses (games)":0},{"Rank":"T-16","Team":"Buffalo Bills","Thanksgiving Games":3,"Losses":0,"Last-Minute Defeats":0,"Losses by Three Points or Fewer":0,"Losses as a Betting Favorite":0,"Losses After Leading by 14+ Points":0,"Losses After Winning the Turnover Battle":0,"Losses Despite Gaining More Offensive Yards":0,"Total":0,"Devastating Losses (games)":0},{"Rank":"T-16","Team":"Carolina Panthers","Thanksgiving Games":1,"Losses":0,"Last-Minute Defeats":0,"Losses by Three Points or Fewer":0,"Losses as a Betting Favorite":0,"Losses After Leading by 14+ Points":0,"Losses After Winning the Turnover Battle":0,"Losses Despite Gaining More Offensive Yards":0,"Total":0,"Devastating Losses (games)":0},{"Rank":"T-16","Team":"Cincinnati Bengals","Thanksgiving Games":2,"Losses":1,"Last-Minute Defeats":0,"Losses by Three Points or Fewer":0,"Losses as a Betting Favorite":0,"Losses After Leading by 14+ Points":0,"Losses After Winning the Turnover Battle":0,"Losses Despite Gaining More Offensive Yards":0,"Total":0,"Devastating Losses (games)":0},{"Rank":"T-16","Team":"Denver Broncos","Thanksgiving Games":4,"Losses":1,"Last-Minute Defeats":0,"Losses by Three Points or Fewer":0,"Losses as a Betting Favorite":0,"Losses After Leading by 14+ Points":0,"Losses After Winning the Turnover Battle":0,"Losses Despite Gaining More Offensive Yards":0,"Total":0,"Devastating Losses (games)":0},{"Rank":"T-16","Team":"Houston Texans","Thanksgiving Games":2,"Losses":0,"Last-Minute Defeats":0,"Losses by Three Points or Fewer":0,"Losses as a Betting Favorite":0,"Losses After Leading by 14+ Points":0,"Losses After Winning the Turnover Battle":0,"Losses Despite Gaining More Offensive Yards":0,"Total":0,"Devastating Losses (games)":0},{"Rank":"T-16","Team":"Indianapolis Colts","Thanksgiving Games":3,"Losses":1,"Last-Minute Defeats":0,"Losses by Three Points or Fewer":0,"Losses as a Betting Favorite":0,"Losses After Leading by 14+ Points":0,"Losses After Winning the Turnover Battle":0,"Losses Despite Gaining More Offensive Yards":0,"Total":0,"Devastating Losses (games)":0},{"Rank":"T-16","Team":"Los Angeles Chargers","Thanksgiving Games":1,"Losses":0,"Last-Minute Defeats":0,"Losses by Three Points or Fewer":0,"Losses as a Betting Favorite":0,"Losses After Leading by 14+ Points":0,"Losses After Winning the Turnover Battle":0,"Losses Despite Gaining More Offensive Yards":0,"Total":0,"Devastating Losses (games)":0},{"Rank":"T-16","Team":"New York Jets","Thanksgiving Games":3,"Losses":2,"Last-Minute Defeats":0,"Losses by Three Points or Fewer":0,"Losses as a Betting Favorite":0,"Losses After Leading by 14+ Points":0,"Losses After Winning the Turnover Battle":0,"Losses Despite Gaining More Offensive Yards":0,"Total":0,"Devastating Losses (games)":0},{"Rank":"T-16","Team":"Philadelphia Eagles","Thanksgiving Games":3,"Losses":1,"Last-Minute Defeats":0,"Losses by Three Points or Fewer":0,"Losses as a Betting Favorite":0,"Losses After Leading by 14+ Points":0,"Losses After Winning the Turnover Battle":0,"Losses Despite Gaining More Offensive Yards":0,"Total":0,"Devastating Losses (games)":0},{"Rank":"T-16","Team":"San Francisco 49ers","Thanksgiving Games":3,"Losses":2,"Last-Minute Defeats":0,"Losses by Three Points or Fewer":0,"Losses as a Betting Favorite":0,"Losses After Leading by 14+ Points":0,"Losses After Winning the Turnover Battle":0,"Losses Despite Gaining More Offensive Yards":0,"Total":0,"Devastating Losses (games)":0},{"Rank":"T-16","Team":"Seattle Seahawks","Thanksgiving Games":3,"Losses":2,"Last-Minute Defeats":0,"Losses by Three Points or Fewer":0,"Losses as a Betting Favorite":0,"Losses After Leading by 14+ Points":0,"Losses After Winning the Turnover Battle":0,"Losses Despite Gaining More Offensive Yards":0,"Total":0,"Devastating Losses (games)":0},{"Rank":"T-16","Team":"Tampa Bay Buccaneers","Thanksgiving Games":1,"Losses":1,"Last-Minute Defeats":0,"Losses by Three Points or Fewer":0,"Losses as a Betting Favorite":0,"Losses After Leading by 14+ Points":0,"Losses After Winning the Turnover Battle":0,"Losses Despite Gaining More Offensive Yards":0,"Total":0,"Devastating Losses (games)":0},{"Rank":"T-16","Team":"Tennessee Titans","Thanksgiving Games":1,"Losses":0,"Last-Minute Defeats":0,"Losses by Three Points or Fewer":0,"Losses as a Betting Favorite":0,"Losses After Leading by 14+ Points":0,"Losses After Winning the Turnover Battle":0,"Losses Despite Gaining More Offensive Yards":0,"Total":0,"Devastating Losses (games)":0},{"Rank":"Not ranked (no games)","Team":"Cleveland Browns","Thanksgiving Games":0,"Losses":0,"Last-Minute Defeats":0,"Losses by Three Points or Fewer":0,"Losses as a Betting Favorite":0,"Losses After Leading by 14+ Points":0,"Losses After Winning the Turnover Battle":0,"Losses Despite Gaining More Offensive Yards":0,"Total":0,"Devastating Losses (games)":0},{"Rank":"Not ranked (no games)","Team":"Jacksonville Jaguars","Thanksgiving Games":0,"Losses":0,"Last-Minute Defeats":0,"Losses by Three Points or Fewer":0,"Losses as a Betting Favorite":0,"Losses After Leading by 14+ Points":0,"Losses After Winning the Turnover Battle":0,"Losses Despite Gaining More Offensive Yards":0,"Total":0,"Devastating Losses (games)":0},{"Rank":"Not ranked (no games)","Team":"Los Angeles Rams","Thanksgiving Games":0,"Losses":0,"Last-Minute Defeats":0,"Losses by Three Points or Fewer":0,"Losses as a Betting Favorite":0,"Losses After Leading by 14+ Points":0,"Losses After Winning the Turnover Battle":0,"Losses Despite Gaining More Offensive Yards":0,"Total":0,"Devastating Losses (games)":0}];
+const $=(s)=>root.querySelector(s), $$=(s)=>Array.from(root.querySelectorAll(s));
+const COLS=['Rank','Team','Thanksgiving Games','Losses','Last-Minute Defeats','Losses by Three Points or Fewer','Losses as a Betting Favorite','Losses After Leading by 14+ Points','Losses After Winning the Turnover Battle','Losses Despite Gaining More Offensive Yards','Total','Devastating Losses (games)'];
+const SHORT=['Rank','Team','Games','Losses','Late-lead losses','Losses ≤ 3 pts','Lost as favorite','Lost after 14+ lead','Lost with TO edge','Lost with yardage edge','Curse points','Distinct qualifying losses'];
+const TIPS={
+ 'Rank':'Teams with matching totals share a rank. Teams without Thanksgiving appearances have no rank.',
+ 'Thanksgiving Games':'Thanksgiving games played during the 1999–2025 study window.',
+ 'Losses':'All Thanksgiving losses, whether or not they met any index condition.',
+ 'Last-Minute Defeats':'Losses after the opponent took the lead for good with 2:00 or less remaining in the fourth quarter or in overtime.',
+ 'Losses by Three Points or Fewer':'Losses decided by three points or fewer, including overtime.',
+ 'Losses as a Betting Favorite':'Losses by teams favored by at least three points before kickoff.',
+ 'Losses After Leading by 14+ Points':'Losses by teams that led by at least 14 points at any time.',
+ 'Losses After Winning the Turnover Battle':'Losses despite forcing strictly more turnovers than the team committed.',
+ 'Losses Despite Gaining More Offensive Yards':'Losses despite gaining strictly more total offensive yards than the opponent.',
+ 'Total':'Curse points: the sum of all six qualifying conditions, with multiple conditions possible per loss.',
+ 'Devastating Losses (games)':'Number of distinct losses meeting at least one of the six qualifying conditions; each game counts once.'};
+const METRICS={
+ 'Total':{title:'Total qualifying loss conditions',unit:'Curse points',label:'Highest curse point total',foot:'A single game can meet multiple conditions. Curse points sum those conditions; they are not a count of separate losses or a per-game rate.',description:(r)=>r.Team+' has '+r.Total+' qualifying conditions across '+r['Devastating Losses (games)']+' distinct Thanksgiving losses.'},
+ 'Devastating Losses (games)':{title:'Individual losses meeting at least one condition',unit:'Qualifying losses',label:'Most distinct qualifying defeats',foot:'Each qualifying Thanksgiving loss is counted once in this view, even when multiple conditions were met.',description:(r)=>r.Team+' recorded '+r['Devastating Losses (games)']+' different losses meeting at least one condition.'},
+ 'Losses':{title:'All Thanksgiving Day defeats',unit:'Holiday losses',label:'Most holiday defeats',foot:'This view includes all Thanksgiving losses, even ones that did not meet any of the six conditions. It reflects different numbers of appearances.',description:(r)=>r.Team+' lost '+r.Losses+' of its '+r['Thanksgiving Games']+' Thanksgiving games in this period.'}
+};
+let metric='Total',fil='all',search='',sortKey='Total',sortDir=-1,page=0;
+const PAGE=15;
+const reduced=()=>window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const numFormat=n=>Number(n).toLocaleString('en-US',{maximumFractionDigits:0});
+const displayCell=(r,key)=>key==='Rank'&&String(r[key]).startsWith('Not ranked')?'NR':r[key];
+const animateJobs=new WeakMap();
+const entries=new WeakSet();
+const watchers=[];
+function setNumber(el,target,opts={}){
+ if(!el)return;target=Number(target)||0;const oldJob=animateJobs.get(el);if(oldJob)cancelAnimationFrame(oldJob);
+ const start=Number(opts.from ?? el.dataset.display ?? el.textContent.replace(/[^\d.-]/g,''))||0;
+ el.dataset.value=target;el.setAttribute('aria-label',numFormat(target));
+ if(reduced()||opts.instant){el.textContent=numFormat(target);el.dataset.display=String(target);return;}
+ const startAt=performance.now(),duration=opts.duration||780;
+ function tick(now){const p=Math.min(1,(now-startAt)/duration);const eased=1-Math.pow(1-p,3);const v=start+(target-start)*eased;el.textContent=numFormat(Math.round(v));el.dataset.display=String(v);if(p<1)animateJobs.set(el,requestAnimationFrame(tick));else{el.textContent=numFormat(target);el.dataset.display=String(target);animateJobs.delete(el)}}
+ animateJobs.set(el,requestAnimationFrame(tick));
+}
+const observer=typeof IntersectionObserver!=='undefined'?new IntersectionObserver(items=>{for(const e of items){if(e.isIntersecting&&e.intersectionRatio>=.20){const el=e.target;if(!entries.has(el)){entries.add(el);setNumber(el,Number(el.dataset.value),{from:0});}observer.unobserve(el);}}},{threshold:[0,.2,.35],rootMargin:'0px 0px -5px 0px'}):null;
+function observeNumbers(){for(const el of $$('.rg-animate-number')){if(el.dataset.registered)return;el.dataset.registered='1';if(observer)observer.observe(el);else{entries.add(el);setNumber(el,Number(el.dataset.value),{from:0});}}}
+function esc(s){return String(s).replace(/[&<>"']/g,x=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[x]));}
+let barsObserver=null;let barsRevealed=false;
+function createBars(){const sorted=DATA.slice(0,5).sort((a,b)=>b[metric]-a[metric]||a.Team.localeCompare(b.Team));const max=sorted[0][metric]||1;const list=$('#rg-comparison-bars');
+ list.innerHTML=sorted.map(r=>`<div class="rg-bar-row"><div class="rg-bar-label">${esc(r.Team)}<small>Overall index rank ${esc(r.Rank)}</small></div><div class="rg-track" role="img" aria-label="${esc(r.Team)}: ${r[metric]} ${esc(METRICS[metric].unit)}"><i class="rg-fill" data-width="${r[metric]/max*100}" style="width:0"></i></div><div class="rg-bar-value">${r[metric]}</div></div>`).join('');
+ const leader=sorted[0];$('#rg-chart-title').textContent=METRICS[metric].title;$('#rg-spotlight-label').textContent=METRICS[metric].label;$('#rg-spotlight-team').textContent=leader.Team;$('#rg-spotlight-copy').textContent=METRICS[metric].description(leader);$('#rg-chart-foot').textContent=METRICS[metric].foot;
+ const sp=$('#rg-spotlight-num');if(entries.has(sp)){setNumber(sp,leader[metric]);}else{sp.dataset.value=leader[metric];sp.textContent=numFormat(leader[metric]);}
+ $$('.rg-tab').forEach(t=>t.setAttribute('aria-selected',String(t.dataset.metric===metric)));
+ barsRevealed=false;
+ if(barsObserver){barsObserver.disconnect();barsObserver=null;}
+ const grow=()=>{if(barsRevealed)return;barsRevealed=true;const fills=$$('.rg-fill');if(reduced())fills.forEach(b=>b.style.width=b.dataset.width+'%');else requestAnimationFrame(()=>requestAnimationFrame(()=>fills.forEach(b=>b.style.width=b.dataset.width+'%')))};
+ if(typeof IntersectionObserver!=='undefined'){barsObserver=new IntersectionObserver(([e])=>{if(e.isIntersecting&&e.intersectionRatio>=.18){grow();barsObserver.disconnect()}},{threshold:[0,.18,.4]});barsObserver.observe($('#rg-comparison-bars'));}else grow();
+}
+$$('.rg-tab').forEach((b,i,all)=>{b.addEventListener('click',()=>{if(metric!==b.dataset.metric){metric=b.dataset.metric;createBars();}});b.addEventListener('keydown',e=>{if(!['ArrowRight','ArrowLeft','Home','End'].includes(e.key))return;e.preventDefault();let j=e.key==='Home'?0:e.key==='End'?all.length-1:(i+(e.key==='ArrowRight'?1:-1)+all.length)%all.length;all[j].focus();all[j].click()})});
+const th=$('#rg-table-head');
+th.innerHTML=COLS.map((col,i)=>{const icon=TIPS[col]?`<button type="button" class="rg-info-button" data-tip="${esc(col)}" aria-label="About ${esc(col)}" aria-describedby="rg-tooltip"><span class="rg-info-glyph" aria-hidden="true">i</span></button>`:'';return `<th scope="col" data-col="${esc(col)}" class="${i<2?'rg-descriptive':''}"><div class="rg-th-inner"><button type="button" class="rg-sort-button" data-sort="${esc(col)}" aria-label="Sort by ${esc(col)}"><span>${esc(SHORT[i])}</span><span class="rg-sort-icon" aria-hidden="true">↕</span></button>${icon}</div></th>`}).join('');
+function rankNum(v){if(typeof v==='number')return v;const m=String(v).match(/\d+/);return m?Number(m[0]):9999;}
+function getFiltered(){let a=DATA.filter(r=>r.Team.toLowerCase().includes(search));if(fil==='scored')a=a.filter(r=>r.Total>0);if(fil==='nogames')a=a.filter(r=>r['Thanksgiving Games']===0);a.sort((a,b)=>{if(fil!=='nogames'){const x=a['Thanksgiving Games']===0,y=b['Thanksgiving Games']===0;if(x!==y)return x?1:-1;}let va=a[sortKey],vb=b[sortKey],cmp=0;if(sortKey==='Rank')cmp=rankNum(va)-rankNum(vb);else if(typeof va==='number'&&typeof vb==='number')cmp=va-vb;else cmp=String(va).localeCompare(String(vb));return cmp*sortDir||a.Team.localeCompare(b.Team)});return a;}
+function renderTable(){const rows=getFiltered();const pages=Math.max(1,Math.ceil(rows.length/PAGE));page=Math.min(page,pages-1);const at=page*PAGE;const vis=rows.slice(at,at+PAGE);
+ $('#rg-table-body').innerHTML=vis.length?vis.map(r=>`<tr>${COLS.map((c,i)=>`<td class="${i<2?'rg-descriptive':''}"${i<2?'': ' data-num="true"'}>${esc(displayCell(r,c))}</td>`).join('')}</tr>`).join(''):'<tr><td class="rg-empty" colspan="12">No teams match your search or filter.</td></tr>';
+ $('#rg-result-count').textContent=rows.length?`Showing ${at+1}–${Math.min(at+PAGE,rows.length)} of ${rows.length} matching teams · ${PAGE} per page`:'No matching teams';
+ const pager=$('#rg-pager');pager.innerHTML=`<button type="button" class="rg-page" data-page="prev" ${page===0?'disabled':''} aria-label="Previous page">‹</button>`+Array.from({length:pages},(_,i)=>`<button type="button" class="rg-page" data-page="${i}" ${i===page?'aria-current="page"':''} aria-label="Page ${i+1}">${i+1}</button>`).join('')+`<button type="button" class="rg-page" data-page="next" ${page===pages-1?'disabled':''} aria-label="Next page">›</button>`;
+ $$('#rg-table-head th').forEach(node=>{const k=node.dataset.col;const arrow=node.querySelector('.rg-sort-icon');arrow.textContent=k===sortKey?(sortDir===1?'↑':'↓'):'↕';node.setAttribute('aria-sort',k===sortKey?(sortDir===1?'ascending':'descending'):'none')});updateArrows();
+}
+th.addEventListener('click',e=>{const b=e.target.closest('.rg-sort-button');if(!b||!root.contains(b))return;const key=b.dataset.sort;if(key===sortKey)sortDir*=-1;else{sortKey=key;sortDir=(key==='Team'?1:-1);}page=0;renderTable()});
+$('#rg-search').addEventListener('input',e=>{search=e.target.value.trim().toLowerCase();page=0;renderTable()});
+$$('.rg-filter').forEach(b=>b.addEventListener('click',()=>{fil=b.dataset.filter;$$('.rg-filter').forEach(f=>f.setAttribute('aria-pressed',String(f===b)));page=0;renderTable()}));
+$('#rg-pager').addEventListener('click',e=>{const b=e.target.closest('button[data-page]');if(!b||b.disabled)return;const p=b.dataset.page;page=p==='prev'?page-1:p==='next'?page+1:Number(p);renderTable();});
+const sc=$('#rg-table-scroll');function updateArrows(){const max=sc.scrollWidth-sc.clientWidth;$('#rg-arrow-left').disabled=sc.scrollLeft<=2;$('#rg-arrow-right').disabled=sc.scrollLeft>=max-2;}sc.addEventListener('scroll',updateArrows,{passive:true});
+$('#rg-arrow-left').addEventListener('click',()=>sc.scrollBy({left:-Math.max(280,sc.clientWidth*.7),behavior:reduced()?'instant':'smooth'}));$('#rg-arrow-right').addEventListener('click',()=>sc.scrollBy({left:Math.max(280,sc.clientWidth*.7),behavior:reduced()?'instant':'smooth'}));
+const tip=$('#rg-tooltip');let currentTip=null;
+function showTip(trigger){if(!trigger)return;currentTip=trigger;tip.textContent=TIPS[trigger.dataset.tip]||'';tip.classList.add('is-visible');tip.setAttribute('aria-hidden','false');positionTip();}
+function positionTip(){if(!currentTip)return;const a=currentTip.getBoundingClientRect(),w=tip.offsetWidth,h=tip.offsetHeight;let left=Math.max(12,Math.min(window.innerWidth-w-12,a.left+a.width/2-w/2));let top=a.top-h-13;const placement=top<10?'bottom':'top';if(placement==='bottom')top=Math.min(window.innerHeight-h-10,a.bottom+13);tip.dataset.placement=placement;tip.style.left=left+'px';tip.style.top=Math.max(8,top)+'px';tip.style.setProperty('--rg-arrow-x',Math.max(12,Math.min(w-12,a.left+a.width/2-left))+'px')}
+function hideTip(){currentTip=null;tip.classList.remove('is-visible');tip.setAttribute('aria-hidden','true')}
+th.addEventListener('pointerover',e=>{const b=e.target.closest('.rg-info-button');if(b)showTip(b)});th.addEventListener('pointerout',e=>{const b=e.target.closest('.rg-info-button');if(b&&!b.contains(e.relatedTarget))hideTip()});
+th.addEventListener('focusin',e=>{const b=e.target.closest('.rg-info-button');if(b)showTip(b)});th.addEventListener('focusout',e=>{if(e.target.closest('.rg-info-button'))hideTip()});
+th.addEventListener('click',e=>{const b=e.target.closest('.rg-info-button');if(!b)return;e.stopPropagation();if(currentTip===b&&tip.classList.contains('is-visible'))hideTip();else showTip(b)});
+root.addEventListener('pointerdown',e=>{if(currentTip&&!e.target.closest('.rg-info-button'))hideTip()});root.addEventListener('keydown',e=>{if(e.key==='Escape')hideTip()});window.addEventListener('resize',()=>{updateArrows();if(currentTip)positionTip()});window.addEventListener('scroll',()=>{if(currentTip)positionTip()},{passive:true});
+// Smooth navigation follows the actual scroll owner, including an overflow-auto CMS wrapper if present.
+let scrollJob=null;
+function ownerFor(el){let n=el.parentElement;while(n&&n!==document.body&&n!==document.documentElement){const st=getComputedStyle(n);if(/auto|scroll/.test(st.overflowY)&&n.scrollHeight>n.clientHeight+5)return n;n=n.parentElement;}return document.scrollingElement||document.documentElement;}
+function goTo(id){const target=$('#'+id);if(!target)return;const owner=ownerFor(target);const doc=owner===document.scrollingElement||owner===document.documentElement||owner===document.body;const nav=$('#rg-menu');const offset=id==='rg-menu-anchor'?8:nav.getBoundingClientRect().height+12;
+ const start=doc?window.scrollY:owner.scrollTop;const orect=doc?{top:0}:owner.getBoundingClientRect();const dest=Math.max(0,start+target.getBoundingClientRect().top-orect.top-offset);if(scrollJob)cancelAnimationFrame(scrollJob);if(reduced()){if(doc)window.scrollTo(0,dest);else owner.scrollTop=dest;return;}
+ const begin=performance.now();function frame(t){const p=Math.min(1,(t-begin)/700);const eased=p<.5?4*p*p*p:1-Math.pow(-2*p+2,3)/2;const next=start+(dest-start)*eased;if(doc)window.scrollTo(0,next);else owner.scrollTop=next;if(p<1)scrollJob=requestAnimationFrame(frame);else scrollJob=null;}scrollJob=requestAnimationFrame(frame);
+}
+root.addEventListener('click',e=>{const b=e.target.closest('button[data-go]');if(!b||!root.contains(b))return;const id=b.dataset.go;goTo(id);if(b.closest('.rg-menu')){$$('.rg-menu button').forEach(x=>x.classList.toggle('is-active',x===b))}});
+function csvValue(v){const s=String(v??'');return /[",\r\n]/.test(s)?'"'+s.replace(/"/g,'""')+'"':s;}
+function downloadBlob(blob,filename){const u=URL.createObjectURL(blob);const a=document.createElement('a');a.href=u;a.download=filename;a.style.display='none';root.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),1200)}
+$('#rg-csv').addEventListener('click',()=>{const rows=getFiltered();const csv='\ufeff'+[COLS.map(csvValue).join(','),...rows.map(r=>COLS.map(k=>csvValue(r[k])).join(','))].join('\r\n');downloadBlob(new Blob([csv],{type:'text/csv;charset=utf-8'}),'RotoGrinders_Thanksgiving_Curse_Filtered_All_Rows.csv')});
+// Export routines use a self-contained canvas: no remote images, fonts, or dependencies.
+const cvColor={navy:'#101820',blue:'#2879fe',deep:'#155fcf',border:'#d9e4ef',ink:'#152a40',muted:'#567087',ice:'#eef5ff'};
+function text(ctx,s,x,y,size=28,color=cvColor.ink,weight=500,align='left'){ctx.font=weight+' '+size+'px Arial, Helvetica, sans-serif';ctx.fillStyle=color;ctx.textAlign=align;ctx.fillText(String(s),x,y)}
+function exportHeader(ctx,W,title,subtitle){ctx.fillStyle='#fff';ctx.fillRect(0,0,W,150);ctx.fillStyle=cvColor.navy;ctx.fillRect(0,0,W,166);ctx.fillStyle=cvColor.blue;ctx.fillRect(0,166,W,8);text(ctx,'Roto',94,83,46,'#ffffff',900);text(ctx,'Grinders',198,83,46,'#82b6ff',900);text(ctx,'Research · NFL Thanksgiving 1999–2025',W-93,83,26,'#cad9e9',700,'right');text(ctx,title,94,250,59,cvColor.navy,900);text(ctx,subtitle,94,305,27,cvColor.muted,500);}
+function writeLines(ctx,string,x,y,maxWidth,size=26,color=cvColor.ink,weight=700,lineHeight=36,align='left',maxLines=3){ctx.font=weight+' '+size+'px Arial, Helvetica, sans-serif';let words=String(string).split(/\s+/),lines=[],line='';for(const w of words){let next=line?line+' '+w:w;if(ctx.measureText(next).width>maxWidth&&line){lines.push(line);line=w;}else line=next;}if(line)lines.push(line);if(lines.length>maxLines)lines=lines.slice(0,maxLines-1).concat(lines.slice(maxLines-1).join(' '));lines.forEach((l,i)=>text(ctx,l,x,y+i*lineHeight,size,color,weight,align));}
+function exportPng(canvas,filename){canvas.toBlob(blob=>{if(blob)downloadBlob(blob,filename);else console.error('PNG export unavailable')},'image/png')}
+$('#rg-chart-export').addEventListener('click',()=>{const W=2800,H=1430,c=document.createElement('canvas');c.width=W;c.height=H;const ctx=c.getContext('2d');ctx.fillStyle='#fff';ctx.fillRect(0,0,W,H);const conf=METRICS[metric];exportHeader(ctx,W,'The Thanksgiving Curse Index',conf.title+' · Top five by overall curse points');const sorted=DATA.slice(0,5).sort((a,b)=>b[metric]-a[metric]||a.Team.localeCompare(b.Team));const max=sorted[0][metric]||1;const left=110,barLeft=870,barWidth=1460;sorted.forEach((r,i)=>{const y=430+i*155;ctx.fillStyle=i%2?'#f5f9ff':'#fff';ctx.fillRect(88,y-73,2624,140);text(ctx,String(i+1).padStart(2,'0'),left,y+9,44,cvColor.blue,900);text(ctx,r.Team,left+100,y+9,37,cvColor.ink,800);ctx.fillStyle='#e5edf8';ctx.fillRect(barLeft,y-26,barWidth,54);ctx.fillStyle=cvColor.blue;ctx.fillRect(barLeft,y-26,barWidth*r[metric]/max,54);text(ctx,r[metric],W-145,y+12,61,cvColor.deep,900,'right')});ctx.fillStyle=cvColor.navy;ctx.fillRect(0,H-115,W,115);text(ctx,'Counts are cumulative; teams have different numbers of Thanksgiving appearances.',94,H-43,29,'#d4e2f2',500);text(ctx,'RotoGrinders',W-94,H-43,31,'#fff',900,'right');exportPng(c,'RotoGrinders_Thanksgiving_Chart_'+metric.replace(/[^A-Za-z]+/g,'_')+'.png')});
+$('#rg-png').addEventListener('click',()=>{const rows=getFiltered(),at=page*PAGE,vis=rows.slice(at,at+PAGE);const W=3200,rowH=94,headerY=380,headH=135,H=headerY+headH+Math.max(1,vis.length)*rowH+185;const c=document.createElement('canvas');c.width=W;c.height=H;const ctx=c.getContext('2d');ctx.fillStyle='#fff';ctx.fillRect(0,0,W,H);const scope=fil==='scored'?'Scored points':fil==='nogames'?'No appearances':'All teams';const range=rows.length?`${at+1}–${Math.min(at+PAGE,rows.length)} of ${rows.length}`:'0 of 0';exportHeader(ctx,W,'Complete Thanksgiving rankings',`Visible page ${page+1} · Rows ${range} · ${scope} · Sort: ${sortKey} ${sortDir===1?'ascending':'descending'}${search?' · Search: '+search:''}`);
+ const widths=[99,360,175,126,244,245,240,240,244,250,172,273];const sum=widths.reduce((a,b)=>a+b,0),factor=(W-172)/sum;const sizes=widths.map(w=>w*factor),xs=[86];for(const w of sizes)xs.push(xs[xs.length-1]+w);
+ ctx.fillStyle=cvColor.navy;ctx.fillRect(86,headerY,W-172,headH);
+ const labels=['Rank','Team','Games','Losses','Last-minute defeats','Losses by 3 points or fewer','Losses as betting favorite','Losses after 14+ point lead','Lost despite TO advantage','Lost despite more yards','Curse points','Distinct qualifying losses'];
+ labels.forEach((s,i)=>{const x=xs[i],mid=x+sizes[i]/2;if(i===1)writeLines(ctx,s,x+14,headerY+57,sizes[i]-22,25,'#fff',900,31,'left',3);else writeLines(ctx,s,mid,headerY+51,sizes[i]-15,22,'#fff',900,30,'center',4)});
+ if(!vis.length){text(ctx,'No matching teams',120,headerY+headH+67,37,cvColor.muted,600)}
+ vis.forEach((r,j)=>{const y=headerY+headH+j*rowH;ctx.fillStyle=j%2?'#f3f8fe':'#fff';ctx.fillRect(86,y,W-172,rowH);ctx.fillStyle='#e1e9f3';ctx.fillRect(86,y+rowH-1,W-172,1);COLS.forEach((k,i)=>{const value=r[k],x=xs[i],center=x+sizes[i]/2;if(i===1){writeLines(ctx,value,x+14,y+54,sizes[i]-22,28,cvColor.ink,800,33,'left',2)}else{text(ctx,displayCell(r,k),center,y+55,i===10?37:29,i===10?cvColor.deep:cvColor.ink,i===10?900:700,'center')}})});
+ const footer=headerY+headH+Math.max(1,vis.length)*rowH+58;ctx.fillStyle=cvColor.blue;ctx.fillRect(86,footer-24,W-172,5);text(ctx,'NR = not ranked (no games). PNG shows this page only; CSV includes all filtered, sorted rows.',86,footer+25,26,cvColor.muted,500);text(ctx,'RotoGrinders Research · NFL Thanksgiving 1999–2025',86,footer+67,24,cvColor.muted,600);exportPng(c,'RotoGrinders_Thanksgiving_Rankings_Page_'+(page+1)+'.png')});
+renderTable();createBars();observeNumbers();
+})();
+</script>
+</body>
+</html>
